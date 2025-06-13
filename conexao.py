@@ -1,9 +1,13 @@
 import requests
 import json
+import os
 
 url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
 response = requests.get(url)
 print(response)
+
+pasta_destino = 'data'
+os.makedirs(pasta_destino, exist_ok=True)
 
 if response.status_code == 200:
     dados_json = response.json()
@@ -24,5 +28,6 @@ else:
 
 for nome_do_restaurante, dados in dados_restaurante.items():
     nome_do_arquivo = f'{nome_do_restaurante}.json'
-    with open(nome_do_arquivo, 'w') as arquivo_restaurante:
+    caminho = os.path.join(pasta_destino, nome_do_arquivo)
+    with open(caminho, 'w') as arquivo_restaurante:
         json.dump(dados,arquivo_restaurante,indent=4)
