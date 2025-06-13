@@ -1,4 +1,4 @@
-from cardapio.item_cardapio import ItemCardapio
+from api.item_cardapio import ItemCardapio
 
 class Sobremesa(ItemCardapio):
     def __init__(self, nome, preco, tipo, tamanho, descricao):

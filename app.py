@@ -1,7 +1,7 @@
-from cardapio.bebida import Bebida
-from cardapio.prato import Prato
-from restaurante import Restaurante
-from cardapio.sobremesa import Sobremesa
+from api.bebida import Bebida
+from api.prato import Prato
+from api.restaurante import Restaurante
+from api.sobremesa import Sobremesa
 
 def main():
     restaurante_praca = Restaurante('praça', 'Gourmet')

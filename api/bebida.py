@@ -1,4 +1,4 @@
-from cardapio.item_cardapio import ItemCardapio
+from api.item_cardapio import ItemCardapio
 
 class Bebida(ItemCardapio):
     def __init__(self,nome,preco,tamanho):

@@ -1,5 +1,5 @@
-from avaliacao import Avaliacao
-from cardapio.item_cardapio import ItemCardapio
+from api.avaliacao import Avaliacao
+from api.item_cardapio import ItemCardapio
 
 class Restaurante:
     restaurantes = []
